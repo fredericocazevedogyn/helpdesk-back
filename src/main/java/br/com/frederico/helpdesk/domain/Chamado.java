@@ -14,9 +14,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import br.com.frederico.helpdesk.domain.enuns.Prioridade;
 import br.com.frederico.helpdesk.domain.enuns.Status;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 @Entity
 public class Chamado implements Serializable {

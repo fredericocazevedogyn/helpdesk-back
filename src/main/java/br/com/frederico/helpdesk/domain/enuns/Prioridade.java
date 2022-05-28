@@ -3,8 +3,8 @@ package br.com.frederico.helpdesk.domain.enuns;
 
 public enum Prioridade {
 	
-	ABERTO(0, "ABERTO"), ANDAMENTO(1, "ANDAMANTO"), ENCERRADO(0, "ENCERRADO");
-	
+	BAIXA(0, "BAIXA"), MEDIA(1, "MEDIA"), ALTA(2, "ALTA");
+		
 	private Integer codigo;
 	private String descricao;
 	

@@ -3,7 +3,7 @@ package br.com.frederico.helpdesk.domain.enuns;
 
 public enum Status {
 	
-	BAIXA(0, "BAIXA"), MEDIA(1, "MEDIA"), ALTA(0, "ALTA");
+	ABERTO(0, "ABERTO"), ANDAMENTO(1, "ANDAMANTO"), ENCERRADO(2, "ENCERRADO");
 	
 	private Integer codigo;
 	private String descricao;
