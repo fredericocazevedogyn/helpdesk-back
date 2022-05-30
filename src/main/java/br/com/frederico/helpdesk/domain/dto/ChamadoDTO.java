@@ -3,6 +3,8 @@ package br.com.frederico.helpdesk.domain.dto;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import br.com.frederico.helpdesk.domain.Chamado;
@@ -18,11 +20,23 @@ public class ChamadoDTO implements Serializable {
 	
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	private LocalDate dataFechamento;
+	
+	@NotNull(message = "O campo prioridade é obrigatório!")
 	private Integer prioridade;
+	
+	@NotNull(message = "O campo status é obrigatório!")
 	private Integer status;
+	
+	@NotNull(message = "O campo título é obrigatório!")
 	private String titulo;
-	private String observação;
+	
+	@NotNull(message = "O campo observações é obrigatório!")
+	private String observacao;
+	
+	@NotNull(message = "O campo técnico é obrigatório!")
 	private Integer tecnico;
+	
+	@NotNull(message = "O campo cliente é obrigatório!")
 	private Integer cliente;
 	private String nomeTecnico;
 	private String nomeCliente;
@@ -33,7 +47,7 @@ public class ChamadoDTO implements Serializable {
 	}
 
 	public ChamadoDTO(Integer id, LocalDate dataAbertura, LocalDate dataFechamento, Integer prioridade, Integer status,
-			String titulo, String observação, Integer tecnico, Integer cliente, String nomeTecnico,
+			String titulo, String observacao, Integer tecnico, Integer cliente, String nomeTecnico,
 			String nomeCliente) {
 		super();
 		this.id = id;
@@ -42,7 +56,7 @@ public class ChamadoDTO implements Serializable {
 		this.prioridade = prioridade;
 		this.status = status;
 		this.titulo = titulo;
-		this.observação = observação;
+		this.observacao = observacao;
 		this.tecnico = tecnico;
 		this.cliente = cliente;
 		this.nomeTecnico = nomeTecnico;
@@ -56,7 +70,7 @@ public class ChamadoDTO implements Serializable {
 		this.prioridade = obj.getPrioridade().getCodigo();
 		this.status = obj.getStatus().getCodigo();
 		this.titulo = obj.getTitulo();
-		this.observação = obj.getObservação();
+		this.observacao = obj.getObservacao();
 		this.tecnico = obj.getTecnico().getId();
 		this.cliente = obj.getCliente().getId();
 		this.nomeTecnico = obj.getTecnico().getNome();
@@ -111,12 +125,12 @@ public class ChamadoDTO implements Serializable {
 		this.titulo = titulo;
 	}
 
-	public String getObservação() {
-		return observação;
+	public String getObservacao() {
+		return observacao;
 	}
 
-	public void setObservação(String observação) {
-		this.observação = observação;
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
 	}
 
 	public Integer getTecnico() {
