@@ -11,8 +11,8 @@ import br.com.frederico.helpdesk.domain.Tecnico;
 import br.com.frederico.helpdesk.domain.dto.TecnicoDTO;
 import br.com.frederico.helpdesk.repository.PessoaRepository;
 import br.com.frederico.helpdesk.repository.TecnicoRepository;
-import br.com.frederico.helpdesk.service.eception.DataIntegrityViolationException;
-import br.com.frederico.helpdesk.service.eception.ObjectNotFoundException;
+import br.com.frederico.helpdesk.service.exception.DataIntegrityViolationException;
+import br.com.frederico.helpdesk.service.exception.ObjectNotFoundException;
 
 @Service
 public class TecnicoService {

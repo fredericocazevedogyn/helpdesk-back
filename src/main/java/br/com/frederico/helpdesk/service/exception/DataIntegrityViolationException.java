@@ -1,4 +1,4 @@
-package br.com.frederico.helpdesk.service.eception;
+package br.com.frederico.helpdesk.service.exception;
 
 public class DataIntegrityViolationException extends RuntimeException{
 
