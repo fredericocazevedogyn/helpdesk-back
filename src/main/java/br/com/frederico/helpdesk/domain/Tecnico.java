@@ -1,5 +1,6 @@
 package br.com.frederico.helpdesk.domain;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,7 +24,7 @@ public class Tecnico extends Pessoa{
 
 	public Tecnico() {
 		super();
-		// TODO Auto-generated constructor stub
+		this.dataCriacao = LocalDate.now();
 	}
 	
 	public Tecnico(TecnicoDTO obj) {
@@ -34,7 +35,7 @@ public class Tecnico extends Pessoa{
 		this.email = obj.getEmail();
 		this.senha = obj.getSenha();
 		this.perfis = obj.getPerfis().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
-		this.dataCriacao = obj.getDataCriacao();
+		this.dataCriacao = LocalDate.now();
 	}
 
 	public Tecnico(Integer id, String nome, String cpf, String email, String senha) {
